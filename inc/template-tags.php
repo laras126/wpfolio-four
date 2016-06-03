@@ -45,7 +45,7 @@ if ( ! function_exists( 'wpfolio_entry_footer' ) ) :
  */
 function wpfolio_entry_footer() {
 	// Hide category and tag text for pages.
-	if ( 'post' === get_post_type() ) {
+	if ( 'post' === get_post_type() && ! in_category( 'project' ) ) {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'wpfolio' ) );
 		if ( $categories_list && wpfolio_categorized_blog() ) {
@@ -59,7 +59,7 @@ function wpfolio_entry_footer() {
 		}
 	}
 
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) && ! in_category( 'project' ) ) {
 		echo '<span class="comments-link">';
 		/* translators: %s: post title */
 		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'wpfolio' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );

@@ -9,10 +9,12 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('col-sm-6 col-md-4 col-lg-3'); ?>>
 
 	<div class="entry-content">
-		<?php the_post_thumbnail('thumbnail'); ?>
+		<a href="<?php the_permalink(); ?>">
+			<?php the_post_thumbnail('wpf-thumbnail'); ?>
+		</a>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wpfolio' ),

@@ -150,3 +150,19 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+
+
+// Custom WPFolio Functions
+
+// Option 1: Update default WP thumbnail size
+// update_option( 'thumbnail_size_w', 400 );
+// update_option( 'thumbnail_size_h', 400 );
+
+// Option 2: Custom WPF Thumbnail size
+add_image_size( 'wpf-thumbnail', 400, 400, true );
+
+
+
+

@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		<h1>CATEGORY TEMPLATE</h1>
+
 		<?php
 		if ( have_posts() ) : ?>
 
@@ -32,19 +32,7 @@ get_header(); ?>
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
 
-				/*
-
-					if post has category "project"
-						get template part for content-project
-					else
-
-				*/
-
-				if( has_category( 'project' )) { // TODO: replace 'project' with call to get option for project category
-					get_template_part( 'template-parts/content', 'project' ); // NOT HERE
-				} else {
-					get_template_part( 'template-parts/content', get_post_format() );
-				}
+				get_template_part( 'template-parts/content', get_post_format() );
 
 			endwhile;
 

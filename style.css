@@ -223,7 +223,8 @@ th {
 .wrapper {
   box-sizing: border-box;
   max-width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 95%; }
 
 .container-fluid {
   margin-right: auto;
@@ -2339,6 +2340,24 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+@media (min-width: 48em) {
+  .content-area {
+    float: left;
+    padding-right: 1.1rem;
+    margin: 0 -25% 0 0;
+    width: 100%; }
+
+  .site-main {
+    margin: 0 25% 0 0; }
+
+  .site-content .widget-area {
+    float: right;
+    overflow: hidden;
+    width: 25%; }
+
+  .site-footer {
+    clear: both;
+    width: 100%; } }
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

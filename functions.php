@@ -45,6 +45,8 @@ function wpfolio_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'wpfolio' ),
+		'footer' => esc_html__( 'Footer', 'wpfolio' ),
+		'social-links' => esc_html__( 'Social Links (Header)', 'wpfolio' )
 	) );
 
 	/*
@@ -103,6 +105,16 @@ function wpfolio_widgets_init() {
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'wpfolio' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Widgets', 'wpfolio' ),
+		'id'            => 'footer',
+		'description'   => esc_html__( 'WPFolio looks best with three footer widgets.', 'wpfolio' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s col-sm-6 col-md-4">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',

@@ -14,6 +14,15 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+    <?php get_sidebar('footer'); ?>
+    <nav class="site-footer-menu">
+      <?php wp_nav_menu(
+          array(
+            'theme_location' => 'footer',
+            'menu_id' => 'footer-menu'
+          )
+        ); ?>
+    </nav>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wpfolio' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'wpfolio' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>

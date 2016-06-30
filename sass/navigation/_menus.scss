@@ -106,3 +106,23 @@
 	}
 }
 
+
+// Social Nav
+
+$social: (
+    twitter:     teal,
+    facebook:    royalblue,
+    google-plus: indianred
+);
+
+@each $network, $color in $social {
+  .#{$network} {
+	  color: $color;
+  }
+}
+
+.site-social-nav {
+
+}
+
+

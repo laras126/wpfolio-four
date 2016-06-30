@@ -1,8 +1,8 @@
-// Media Queries
-// http://css-tricks.com/conditional-media-query-mixins/
-
-// A breakpoint mixin is super useful for nesting within other selectors:
-
+// Breakpoint mixin and variables
+$screen-xs:     28em;
+$screen-sm:     35em;
+$screen-md:     48em;
+$screen-lg:     60em;
 $MQs: true;
 
 @mixin bp($point) {
@@ -51,4 +51,9 @@ $MQs: true;
 // Clear after (not all clearfix need this also)
 @mixin clearfix-after() {
 	clear: both;
+}
+
+@mixin upperspace {
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }

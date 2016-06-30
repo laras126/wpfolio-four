@@ -2097,9 +2097,9 @@ input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
+  border-radius: 1px;
   background: #e6e6e6;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
   font-size: 0.75rem;
@@ -2111,7 +2111,7 @@ input[type="submit"] {
   input[type="reset"]:hover,
   input[type="submit"]:hover {
     border-color: #ccc #bbb #aaa;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8); }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -2120,7 +2120,7 @@ input[type="submit"] {
   input[type="submit"]:active,
   input[type="submit"]:focus {
     border-color: #aaa #bbb #bbb;
-    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5); }
 
 input[type="text"],
 input[type="email"],
@@ -2173,9 +2173,10 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: royalblue;
+  text-decoration: none; }
   a:visited {
-    color: purple; }
+    color: #1a3ca2; }
   a:hover, a:focus, a:active {
     color: midnightblue; }
   a:focus {
@@ -2247,6 +2248,15 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+.twitter {
+  color: teal; }
+
+.facebook {
+  color: royalblue; }
+
+.google-plus {
+  color: indianred; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -2334,30 +2344,27 @@ a {
 .widget {
   margin: 0 0 1.5em;
   /* Make sure select elements fit in widgets. */ }
+  .widget li, .widget p {
+    font-size: 0.85rem; }
   .widget select {
     max-width: 100%; }
+  .widget > ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0; }
+
+.widget-title {
+  font-size: 1.1rem; }
 
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-@media (min-width: 48em) {
-  .content-area {
-    float: left;
-    padding-right: 1.1rem;
-    margin: 0 -25% 0 0;
-    width: 100%; }
+.site-title {
+  font-size: 1.98rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0; }
 
-  .site-main {
-    margin: 0 25% 0 0; }
-
-  .site-content .widget-area {
-    float: right;
-    overflow: hidden;
-    width: 25%; }
-
-  .site-footer {
-    clear: both;
-    width: 100%; } }
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -2387,6 +2394,10 @@ a {
 .category-portfolio
 .entry-title {
   font-size: 1.1rem; }
+
+.wpf-home-image {
+  width: 100%;
+  opacity: 0; }
 
 /*--------------------------------------------------------------
 ## Asides

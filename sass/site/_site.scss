@@ -1,6 +1,15 @@
 @import "../layout/content-sidebar";
 // @import "../layout/sidebar-content";
 
+
+// Typography
+
+.site-title {
+  font-size: $size-h3;
+  @include upperspace;
+  margin-bottom: 0;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
